@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
 from datetime import datetime
-from private import api_key
+# from private import api_key
 
 __all__ = ['MessariEtl']
 
