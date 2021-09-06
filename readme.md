@@ -5,7 +5,7 @@ Unofficial Python Wrapper for Messari data.
 # Quickstart
 
 ```shell
-pip install 'git+https://github.com/spiyer99/messari-etl.git'
+pip install 'git+https://github.com/spiyer99/messari_etl.git#egg=messari_etl'
 ```
 
 ```python
@@ -29,7 +29,7 @@ timestamp
 
 Please note all prices in USD. All dates are in yyyy-mm-dd.
 
-## Transaction Gas Average
+## Transaction Gas Average (requires a pro or enterprise subscription)
 ```python
 from messari_etl import MessariEtl
 
@@ -54,7 +54,7 @@ print(df.head())
 from messari_etl import MessariEtl
 
 client = MessariEtl()
-df = client.get_assets(assets = ['uni', 'mkr', 'aave', 'cake'], metric = 'daily.shp', col = 'sharpe_30d', start_date = '2021-01-01', end_date = '2021-03-01')
+df = client.get_data(assets = ['uni', 'mkr', 'aave', 'cake'], metric = 'daily.shp', col = 'sharpe_30d', start_date = '2021-01-01', end_date = '2021-03-01')
 
 print(df.head())
 ```
